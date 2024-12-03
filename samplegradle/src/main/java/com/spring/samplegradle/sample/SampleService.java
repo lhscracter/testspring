@@ -32,7 +32,9 @@ public class SampleService {
 		updateSample.setUsername(sample.getUsername());
 		
 		if(sample.getWebsite().equals("false")) {
+			
 			sampleRepository.delete(updateSample);
+			
 		}else {
 			sampleRepository.save(updateSample);
 		}
